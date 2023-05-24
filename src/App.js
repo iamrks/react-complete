@@ -3,7 +3,7 @@ import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const DUMMY_EXPENSE = [
+const DUMMY_EXPENSES = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -31,13 +31,12 @@ const DUMMY_EXPENSE = [
 ];
 
 const App = () => {
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSE);
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const onAddExpenseHandler = (newExpenseData) => {
     setExpenses((prevExpenses) => {
       return [newExpenseData, ...prevExpenses];
     });
-    console.log("APP::: ", newExpenseData);
   };
 
   return (
